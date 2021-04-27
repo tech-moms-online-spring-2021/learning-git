@@ -11,6 +11,103 @@
 
 <body>
     <h1>Learning to use git</h1>
+    <h2>Install git</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>System</th>
+                <th>Instructions</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Mac</th>
+                <td><a
+                        href="https://www.atlassian.com/git/tutorials/install-git#mac-os-x">https://www.atlassian.com/git/tutorials/install-git#mac-os-x</a>
+                </td>
+                <td>You only need to follow the section titled <strong>Git for Mac Installer</strong></td>
+            </tr>
+            <tr>
+                <th>Windows</th>
+                <td><a
+                        href="https://www.atlassian.com/git/tutorials/install-git#windows">https://www.atlassian.com/git/tutorials/install-git#windows</a>
+                </td>
+                <td>You only need to follow the section titled <strong>Git for Windows stand-alone installer</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Getting started</h2>
+    <p>You can either clone an existing repository or start one from scratch</p>
+    <h3>Cloning a repository </h3>
+    <p>"Cloning" is how you download a repository to your local machine and get it prepped for contributing.</p>
+    <code>git clone https://github.com/tech-moms-online-spring-2021/learning-git.git</code>
+    <h3>Start from scratch</h3>
+    <ol>
+        <li>Log into github.com and create a new, empty repository</li>
+        <li>Follow the instructions for creating a new repository on the command line ... something like this</li>
+        <code>
+echo "# gapper-gonzo" >> README.md<br/>
+git init<br/>
+git add README.md<br/>
+git commit -m "first commit"<br/>
+git branch -M main<br/>
+git remote add origin https://github.com/sunitajennings/gapper-gonzo.git<br/>
+git push -u origin main
+        </code>
+    </ol>
+    <p><em>Both of these methods will create a new local repository that is connected to the remote repository (what you
+            see
+            on github.com)</em></p>
+    <h2>Git Cheatsheet</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td class="command">git status</td>
+                <td>What's the status of my current branch?</td>
+            </tr>
+            <tr>
+                <td class="command">git checkout -b "sunita/my-first-branch"</td>
+                <td>Create a new local branch called "sunita/my-first-branch", and make that your working branch</td>
+            </tr>
+            <tr>
+                <td class="command">git add .</td>
+                <td>Add all changes to the "staging area"</td>
+            </tr>
+            <tr>
+                <td class="command">git add my_file.txt</td>
+                <td>Add a specific file to the "staging area"</td>
+            </tr>
+            <tr>
+                <td class="command">git commit -m "I added a new file"</td>
+                <td>Commit your staged changes</td>
+            </tr>
+            <tr>
+                <td class="command">git push --set-upstream origin sunita/my-first-branch</td>
+                <td>Push your local changes to the remote repository. Note that you can just type <code>git push</code>,
+                    and git will prompt you to type out this full command.<br>
+                    If your push is successful, git will give you a url for creating a pull request. Create the pull
+                    request and wait for approval.</td>
+            </tr>
+            <tr>
+                <td class="command">git checkout main</td>
+                <td>Switch your working branch to the <code>main</code> branch</td>
+            </tr>
+            <tr>
+                <td class="command">git fetch</td>
+                <td>Tell git to look for changes (no changes will be applied, but you'll see a list of any new branches
+                    that have been created on the remote repository)</td>
+            </tr>
+            <tr>
+                <td class="command">git pull</td>
+                <td>Apply any changes from the remote repository to your local repository</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Make edits here</h2>
+
 </body>
 
 </html>
